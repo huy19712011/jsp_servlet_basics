@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <p>The time on server is: <%= new java.util.Date() %></p>
     </body>
 </html>
