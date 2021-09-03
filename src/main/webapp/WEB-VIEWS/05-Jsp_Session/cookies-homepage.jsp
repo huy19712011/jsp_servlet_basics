@@ -5,6 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@ page import="java.net.URLDecoder" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +25,8 @@
         if (theCookies != null) {
             for (Cookie tempCookie : theCookies) {
                 if ("myApp.favoriteLanguage".equals(tempCookie.getName())) {
-                    favLang = tempCookie.getValue();
+                    //favLang = tempCookie.getValue();
+                    favLang = URLDecoder.decode(tempCookie.getValue(), "UTF-8");
                     break;
                 }
             }

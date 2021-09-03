@@ -5,6 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@ page import="java.net.URLEncoder" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +18,9 @@
     <%
         // read form data
         String favLang = request.getParameter("favoriteLanguage");
+
+        // handle case of languages with spaces in them
+        favLang = URLEncoder.encode(favLang, "UTF-8");
 
         // create the cookie
         Cookie theCookie = new Cookie("myApp.favoriteLanguage", favLang);
@@ -28,7 +34,7 @@
 
     <body>
         <p>Thanks! We set your favorite language to ${param.favoriteLanguage}</p>
-        <p>Thanks! We set your favorite language to <%= favLang %></p>
+        <p>Thanks! We set your favorite language to <%= favLang%></p>
         <a href="cookies-homepage.jsp">Go to Homepage</a>
     </body>
 </html>
