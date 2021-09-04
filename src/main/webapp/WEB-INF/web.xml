@@ -8,6 +8,10 @@
         <servlet-name>StudentServlet</servlet-name>
         <servlet-class>S09_servlet_fundamentals.StudentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReadParamServlet</servlet-name>
+        <servlet-class>S09_servlet_fundamentals.ReadParamServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloWorldServlet</servlet-name>
         <url-pattern>/HelloWorldServlet</url-pattern>
@@ -16,9 +20,26 @@
         <servlet-name>StudentServlet</servlet-name>
         <url-pattern>/StudentServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadParamServlet</servlet-name>
+        <url-pattern>/ReadParamServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+    <!--context - only for test-->
+    <context-param>
+        <param-name>max-shopping-cart-size</param-name>
+        <param-value>99</param-value>
+    </context-param>
+    <context-param>
+        <param-name>academy-name</param-name>
+        <param-value>Bkacad</param-value>
+    </context-param>
 </web-app>
