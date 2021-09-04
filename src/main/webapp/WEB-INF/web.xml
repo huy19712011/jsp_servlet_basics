@@ -4,9 +4,17 @@
         <servlet-name>HelloWorldServlet</servlet-name>
         <servlet-class>S09_servlet_fundamentals.HelloWorldServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>S09_servlet_fundamentals.StudentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloWorldServlet</servlet-name>
         <url-pattern>/HelloWorldServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/StudentServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
