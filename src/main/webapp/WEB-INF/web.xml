@@ -12,6 +12,10 @@
         <servlet-name>ReadParamServlet</servlet-name>
         <servlet-class>S09_servlet_fundamentals.ReadParamServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MvcDemoServlet</servlet-name>
+        <servlet-class>S10_mvc.MvcDemoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloWorldServlet</servlet-name>
         <url-pattern>/HelloWorldServlet</url-pattern>
@@ -24,6 +28,10 @@
         <servlet-name>ReadParamServlet</servlet-name>
         <url-pattern>/ReadParamServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MvcDemoServlet</servlet-name>
+        <url-pattern>/MvcDemoServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
@@ -32,7 +40,6 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
-    
     <!--context - only for test-->
     <context-param>
         <param-name>max-shopping-cart-size</param-name>
