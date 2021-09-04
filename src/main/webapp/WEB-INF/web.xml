@@ -16,6 +16,10 @@
         <servlet-name>MvcDemoServlet</servlet-name>
         <servlet-class>S10_mvc.MvcDemoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StudentControllerServlet</servlet-name>
+        <servlet-class>S10_mvc.controllers.StudentControllerServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloWorldServlet</servlet-name>
         <url-pattern>/HelloWorldServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>MvcDemoServlet</servlet-name>
         <url-pattern>/MvcDemoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentControllerServlet</servlet-name>
+        <url-pattern>/StudentControllerServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
